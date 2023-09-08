@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.12.RELEASE</version>
+        <version>3.0.2</version>
         <relativePath/>
     </parent>
     <groupId>com.bocft</groupId>
@@ -19,8 +19,8 @@
         <java.version>1.8</java.version>
         <java.encoding>UTF-8</java.encoding>
         <spring.version>5.2.15.RELEASE</spring.version>
-        <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
-        <spring.cloud.version>Hoxton.SR12</spring.cloud.version>
+        <spring.boot.version>3.0.2</spring.boot.version>
+        <spring.cloud.version>2022.0.0</spring.cloud.version>
         <swagger.version>2.9.1</swagger.version>
         <servlet.version>3.1.0</servlet.version>
         <jsp.version>2.2</jsp.version>
@@ -71,7 +71,6 @@
         <jxls.version>1.0.6</jxls.version>
         <itextpdf.version>5.5.10</itextpdf.version>
         <itextpdf.asian.version>5.2.0</itextpdf.asian.version>
-<!--        <mongodb.version>3.6.3</mongodb.version>-->
         <mvel.version>2.4.0.Final</mvel.version>
         <esper.version>5.5.0</esper.version>
         <neo4j-ogm.version>3.0.0</neo4j-ogm.version>
@@ -648,11 +647,11 @@
             </dependency>
 
             <!-- Mongo DB -->
-            <dependency>
-                <groupId>org.mongodb</groupId>
-                <artifactId>mongo-java-driver</artifactId>
+<!--            <dependency>-->
+<!--                <groupId>org.mongodb</groupId>-->
+<!--                <artifactId>mongo-java-driver</artifactId>-->
 <!--                <version>${mongodb.version}</version>-->
-            </dependency>
+<!--            </dependency>-->
 
             <!-- zookeeper -->
             <dependency>
