@@ -1,0 +1,1193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.2</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.bocft</groupId>
+    <artifactId>gtms-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <url>http://www.bocft.com/</url>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <java.encoding>UTF-8</java.encoding>
+        <spring.version>5.2.15.RELEASE</spring.version>
+        <spring.boot.version>3.0.2</spring.boot.version>
+        <spring.cloud.version>2022.0.0</spring.cloud.version>
+        <ijep.version>1.0.0-SNAPSHOT</ijep.version>
+        <gtms.version>1.0.0-SNAPSHOT</gtms.version>
+        <swagger.version>2.9.1</swagger.version>
+        <swagger.bootstrap.version>1.9.6</swagger.bootstrap.version>
+        <servlet.version>3.1.0</servlet.version>
+        <jsp.version>2.2</jsp.version>
+        <jstl.version>1.2</jstl.version>
+        <taglibs.version>1.1.2</taglibs.version>
+        <logback.version>1.2.3</logback.version>
+        <slf4j.version>1.7.21</slf4j.version>
+        <junit.version>4.13</junit.version>
+        <mybatis.version>3.4.6</mybatis.version>
+        <mybtais-spring.version>1.3.2</mybtais-spring.version>
+        <mybatis.pagehelper.version>5.1.3</mybatis.pagehelper.version>
+        <mybatis.generator.version>1.3.5</mybatis.generator.version>
+        <jsqlparser.version>1.1</jsqlparser.version>
+        <jackson.version>2.11.0</jackson.version>
+        <aspectj.version>1.8.10</aspectj.version>
+        <httpclient.version>4.5.13</httpclient.version>
+        <fastjson.version>1.2.70</fastjson.version>
+        <commons.lang.version>2.6</commons.lang.version>
+        <commons.lang3.version>3.5</commons.lang3.version>
+        <commons.beanutils.version>1.9.2</commons.beanutils.version>
+        <commons.dbcp.version>1.4</commons.dbcp.version>
+        <commons.codec.version>1.10</commons.codec.version>
+        <commons.fileupload.version>1.3.2</commons.fileupload.version>
+        <commons.io.version>2.5</commons.io.version>
+        <commons.pool2>2.0</commons.pool2>
+        <xstream.version>1.4.16</xstream.version>
+        <jpa.api.version>1.0.0.Final</jpa.api.version>
+        <validation.api.version>2.0.1.Final</validation.api.version>
+        <hibernate.validator.version>6.0.13.Final</hibernate.validator.version>
+        <mysql.connector.version>5.1.38</mysql.connector.version>
+        <ojdbc6.version>11.2.0.1.0</ojdbc6.version>
+        <hikari.version>2.7.6</hikari.version>
+        <inject.version>1</inject.version>
+        <proxool.version>0.9.1</proxool.version>
+        <ecj.version>3.12.3</ecj.version>
+        <jwt.version>3.2.0</jwt.version>
+        <jjwt.version>0.9.0</jjwt.version>
+        <activation.version>1.1</activation.version>
+        <poi.version>3.9</poi.version>
+        <xerces.version>2.9.1</xerces.version>
+        <dom4j.version>1.6.1</dom4j.version>
+        <jxls.version>1.0.6</jxls.version>
+        <itextpdf.version>5.5.10</itextpdf.version>
+        <itextpdf.asian.version>5.2.0</itextpdf.asian.version>
+        <mvel.version>2.4.0.Final</mvel.version>
+        <esper.version>5.5.0</esper.version>
+        <neo4j-ogm.version>3.0.0</neo4j-ogm.version>
+        <neo4j-java.version>1.4.3</neo4j-java.version>
+        <spring-hateoas.version>0.24.0.RELEASE</spring-hateoas.version>
+        <jersey-version>2.25.1</jersey-version>
+        <jetty.version>9.3.21.v20170918</jetty.version>
+        <spring-cloud-netflix-eureka-client.version>2.0.2.RELEASE</spring-cloud-netflix-eureka-client.version>
+        <elasticsearch.version>6.2.4</elasticsearch.version>
+        <zipkin.version>2.12.0</zipkin.version>
+        <apollo.version>0.4.3</apollo.version>
+        <nacos.version>2022.0.0.0</nacos.version>
+
+        <skip_maven_deploy>false</skip_maven_deploy>
+        <java_source_version>1.8</java_source_version>
+        <java_target_version>1.8</java_target_version>
+        <file_encoding>UTF-8</file_encoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven_compiler_plugin_version>3.1</maven_compiler_plugin_version>
+        <maven_source_plugin_version>2.4</maven_source_plugin_version>
+        <maven_resource_plugin_version>2.7</maven_resource_plugin_version>
+        <maven_surefire_plugin_version>2.19.1</maven_surefire_plugin_version>
+        <maven_shade_plugin_version>2.4.3</maven_shade_plugin_version>
+        <maven_jar_plugin_version>2.5</maven_jar_plugin_version>
+        <maven_war_plugin_version>2.1.1</maven_war_plugin_version>
+        <maven_install_plugin_version>2.3.1</maven_install_plugin_version>
+        <maven_deploy_plugin_version>2.7</maven_deploy_plugin_version>
+
+        <itextpdf.version>5.5.10</itextpdf.version>
+        <itext.asian.version>5.2.0</itext.asian.version>
+        <redisson.version>3.15.1</redisson.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- itext依赖 -->
+            <!--<dependency>
+                <groupId>com.itextpdf</groupId>
+                <artifactId>itextpdf</artifactId>
+                <version>${itextpdf.version}</version>
+            </dependency>-->
+            <!--<dependency>
+              <groupId>com.itextpdf</groupId>
+              <artifactId>itext-asian</artifactId>
+              <version>${itext.asian.version}</version>
+            </dependency>-->
+            <!-- ======================================== -->
+            <!-- 模拟程序依赖 -->
+            <!-- ======================================== -->
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>gtms-entity-baffle</artifactId>
+                <version>${gtms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>gtms-core-baffle</artifactId>
+                <version>${gtms.version}</version>
+            </dependency>
+
+            <!-- ======================================== -->
+            <!-- gtms依赖 -->
+            <!-- ======================================== -->
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>gtms-core-gateway</artifactId>
+                <version>${gtms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>gtms-entity-gateway</artifactId>
+                <version>${gtms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>gtms-entity-business</artifactId>
+                <version>${gtms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>gtms-core-business</artifactId>
+                <version>${gtms.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>gtms-core-report</artifactId>
+                <version>${gtms.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>gtms-entity-report</artifactId>
+                <version>${gtms.version}</version>
+            </dependency>
+            <!-- ======================================== -->
+            <!-- JEP依赖 -->
+            <!-- ======================================== -->
+
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-bpm-server</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <!-- ijep-commons -->
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-commons-lang</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <!-- ijep-core -->
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-core</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-web-api</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-orm-api</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-orm-mybatis</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-attachment-core</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-oauth2-core</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <!-- ijep-entity -->
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-entity-core</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>ijep-entity-bpm</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-entity-rule</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-entity-schedule</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-entity-sys</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-entity-attachment</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-entity-oauth2</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <!-- ijep-sys -->
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-sys-core</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-sys-notify</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-kgraph-api</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-stream-esper</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-autoconfigure-cache-zookeeper</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <!-- ijep-schedule -->
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-schedule-api</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-schedule-server</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-schedule-client</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <!-- ijep-autoconfigure -->
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-autoconfigure-core</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-autoconfigure-orm</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-autoconfigure-phoenix</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-autoconfigure-web</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-autoconfigure-cache-redis</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-cache-mongo</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-autoconfigure-schedule-client</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <!-- Aspectj -->
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+
+            <!-- spring -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-expression</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-oxm</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jms</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <!-- spring boot -->
+            <!-- 核心，包括自动配置、日志、yaml配置文件支持 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <!-- web支持，包含 Tomcat 和 spring MVC -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <!-- 监控和管理应用 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <!-- 自动化配置 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <!-- 使用 spring-aop 和 AspectJ 支持面向切面编程 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <!-- 对 JDBC 数据库的支持 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jdbc</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <!-- 对 JUnit、Hamcrest、Mockito 的支持 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <!-- 对 websocket 的支持 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-websocket</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
+            <!-- spring cloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- swagger -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>swagger-bootstrap-ui</artifactId>
+                <version>${swagger.bootstrap.version}</version>
+            </dependency>
+            <!-- xstream -->
+            <dependency>
+                <groupId>com.thoughtworks.xstream</groupId>
+                <artifactId>xstream</artifactId>
+                <version>${xstream.version}</version>
+            </dependency>
+
+            <!-- jpa -->
+            <dependency>
+                <groupId>org.hibernate.javax.persistence</groupId>
+                <artifactId>hibernate-jpa-2.1-api</artifactId>
+                <version>${jpa.api.version}</version>
+            </dependency>
+            <!-- validation -->
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${validation.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate.validator.version}</version>
+            </dependency>
+
+            <!-- MyBatis -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybtais-spring.version}</version>
+            </dependency>
+
+            <!-- JSQLParser -->
+            <dependency>
+                <groupId>com.github.jsqlparser</groupId>
+                <artifactId>jsqlparser</artifactId>
+                <version>${jsqlparser.version}</version>
+            </dependency>
+
+            <!-- MyBatis pager -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${mybatis.pagehelper.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-core</artifactId>
+                <version>${mybatis.generator.version}</version>
+            </dependency>
+
+            <!-- MySQL -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
+
+            <!-- Hikari -->
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>${hikari.version}</version>
+            </dependency>
+
+            <!-- Apache commons -->
+            <dependency>
+                <groupId>commons-dbcp</groupId>
+                <artifactId>commons-dbcp</artifactId>
+                <version>${commons.dbcp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons.codec.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons.fileupload.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons.io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>${commons.lang.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${commons.beanutils.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${commons.pool2}</version>
+            </dependency>
+
+            <!-- http client -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>fluent-hc</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpmime</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+
+            <!-- json解析 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- logging -->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-access</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <!-- junit -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+
+            <!-- zipkin -->
+            <dependency>
+                <groupId>io.zipkin.java</groupId>
+                <artifactId>zipkin-server</artifactId>
+                <version>${zipkin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.zipkin.java</groupId>
+                <artifactId>zipkin-autoconfigure-ui</artifactId>
+                <version>${zipkin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.zipkin.java</groupId>
+                <artifactId>zipkin-autoconfigure-storage-mysql</artifactId>
+                <version>${zipkin.version}</version>
+            </dependency>
+
+
+            <!-- jackson -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-xml</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <!-- j2ee -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${servlet.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>jsp-api</artifactId>
+                <version>${jsp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.inject</groupId>
+                <artifactId>javax.inject</artifactId>
+                <version>${inject.version}</version>
+            </dependency>
+
+            <!-- jstl -->
+            <dependency>
+                <groupId>javax.servlet.jsp.jstl</groupId>
+                <artifactId>jstl-api</artifactId>
+                <version>${jstl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>taglibs</groupId>
+                <artifactId>standard</artifactId>
+                <version>${taglibs.version}</version>
+            </dependency>
+
+            <!-- ECJ -->
+            <dependency>
+                <groupId>org.eclipse.jdt</groupId>
+                <artifactId>ecj</artifactId>
+                <version>${ecj.version}</version>
+            </dependency>
+
+            <!-- proxool -->
+            <dependency>
+                <groupId>com.cloudhopper.proxool</groupId>
+                <artifactId>proxool</artifactId>
+                <version>${proxool.version}</version>
+            </dependency>
+
+            <!-- jwt -->
+            <dependency>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>${jwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.activation</groupId>
+                <artifactId>activation</artifactId>
+                <version>${activation.version}</version>
+            </dependency>
+
+            <!-- poi -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>xerces</groupId>
+                <artifactId>xercesImpl</artifactId>
+                <version>${xerces.version}</version>
+            </dependency>
+
+            <!-- 导出pdf -->
+            <dependency>
+                <groupId>com.itextpdf</groupId>
+                <artifactId>itextpdf</artifactId>
+                <version>${itextpdf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.itextpdf</groupId>
+                <artifactId>itext-asian</artifactId>
+                <version>${itextpdf.asian.version}</version>
+            </dependency>
+
+            <!-- dom4j -->
+            <dependency>
+                <groupId>org.apache.directory.studio</groupId>
+                <artifactId>org.dom4j.dom4j</artifactId>
+                <version>${dom4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.neo4j</groupId>
+                <artifactId>neo4j-ogm-core</artifactId>
+                <version>${neo4j-ogm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.neo4j</groupId>
+                <artifactId>neo4j-ogm-bolt-driver</artifactId>
+                <version>${neo4j-ogm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.neo4j.driver</groupId>
+                <artifactId>neo4j-java-driver</artifactId>
+                <version>${neo4j-java.version}</version>
+            </dependency>
+
+            <!-- jxls -->
+            <dependency>
+                <groupId>net.sf.jxls</groupId>
+                <artifactId>jxls-core</artifactId>
+                <version>${jxls.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.jxls</groupId>
+                <artifactId>jxls-reader</artifactId>
+                <version>${jxls.version}</version>
+            </dependency>
+
+            <!-- mvel -->
+            <dependency>
+                <groupId>org.mvel</groupId>
+                <artifactId>mvel2</artifactId>
+                <version>${mvel.version}</version>
+            </dependency>
+
+            <!-- spring-hateoas -->
+            <dependency>
+                <groupId>org.springframework.hateoas</groupId>
+                <artifactId>spring-hateoas</artifactId>
+                <version>${spring-hateoas.version}</version>
+            </dependency>
+
+            <!-- jetty-server -->
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-server</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+
+            <!-- jetty-servlet -->
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-servlet</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+
+            <!-- jetty-util -->
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-util</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+
+            <!-- jetty-continuation -->
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-continuation</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+
+            <!-- jersey-server -->
+            <dependency>
+                <groupId>org.glassfish.jersey.core</groupId>
+                <artifactId>jersey-server</artifactId>
+                <version>${jersey-version}</version>
+            </dependency>
+
+            <!-- jersey-container-servlet -->
+            <dependency>
+                <groupId>org.glassfish.jersey.containers</groupId>
+                <artifactId>jersey-container-servlet</artifactId>
+                <version>${jersey-version}</version>
+            </dependency>
+
+            <!-- jersey-container-jetty-http -->
+            <dependency>
+                <groupId>org.glassfish.jersey.containers</groupId>
+                <artifactId>jersey-container-jetty-http</artifactId>
+                <version>${jersey-version}</version>
+            </dependency>
+
+            <!-- jersey-media-moxy -->
+            <dependency>
+                <groupId>org.glassfish.jersey.media</groupId>
+                <artifactId>jersey-media-moxy</artifactId>
+                <version>${jersey-version}</version>
+            </dependency>
+
+            <!-- spring-cloud-netflix-eureka-client -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-netflix-eureka-client</artifactId>
+                <version>${spring.boot.version}</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <!-- 工作流相关 -->
+            <dependency>
+                <groupId>com.bocft</groupId>
+                <artifactId>ijep-autoconfigure-bpm-client</artifactId>
+                <version>${ijep.version}</version>
+            </dependency>
+
+            <!--     apollo       -->
+            <dependency>
+                <groupId>com.ctrip.framework.apollo</groupId>
+                <artifactId>apollo-client</artifactId>
+                <version>1.4.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>20.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.espertech</groupId>
+                <artifactId>esper</artifactId>
+                <version>${esper.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>log4j</artifactId>
+                        <groupId>log4j</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+
+            <!--    nacos    -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>${nacos.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${nacos.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!--<repositories>-->
+    <!--		&lt;!&ndash; Required repositories by your develop team &ndash;&gt;-->
+    <!--		<repository>-->
+    <!--			<id>nexus</id>-->
+    <!--			<name>nexus</name>-->
+    <!--			<url>http://39.101.164.134:8010/repository/maven-public/</url>-->
+    <!--			<layout>default</layout>-->
+    <!--			<releases>-->
+    <!--				<enabled>true</enabled>-->
+    <!--				<updatePolicy>always</updatePolicy>-->
+    <!--			</releases>-->
+    <!--			<snapshots>-->
+    <!--				<enabled>true</enabled>-->
+    <!--				<updatePolicy>always</updatePolicy>-->
+    <!--			</snapshots>-->
+    <!--		</repository>-->
+    <!--		<repository>-->
+    <!--			<id>aliyun</id>-->
+    <!--			<name>aliyun</name>-->
+    <!--			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>-->
+    <!--			<layout>default</layout>-->
+    <!--			<releases>-->
+    <!--				<enabled>true</enabled>-->
+    <!--				<updatePolicy>always</updatePolicy>-->
+    <!--			</releases>-->
+    <!--			<snapshots>-->
+    <!--				<enabled>true</enabled>-->
+    <!--				<updatePolicy>always</updatePolicy>-->
+    <!--			</snapshots>-->
+    <!--		</repository>-->
+    <!--	</repositories>-->
+
+    <distributionManagement>
+        <!-- 两个ID必须与 setting.xml中的<server><id>nexus-releases</id></server>保持一致-->
+        <repository>
+            <id>nexus-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://192.168.1.4:8081/repository/nexus-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://192.168.1.4:8081/repository/nexus-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${java.encoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <addMavenDescriptor>true</addMavenDescriptor>
+                        <index>true</index>
+                        <manifest>
+                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <includeEmptyDirs>true</includeEmptyDirs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>${skip_maven_deploy}</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-shade-plugin</artifactId>
+                    <version>${maven_shade_plugin_version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven_surefire_plugin_version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven_resource_plugin_version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven_source_plugin_version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven_jar_plugin_version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${maven_war_plugin_version}</version>
+                    <configuration>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>${maven_install_plugin_version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>${maven_deploy_plugin_version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven_compiler_plugin_version}</version>
+                    <configuration>
+                        <fork>true</fork>
+                        <source>${java_source_version}</source>
+                        <target>${java_target_version}</target>
+                        <encoding>${file_encoding}</encoding>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-archetype-plugin</artifactId>
+                </plugin>
+
+                <!-- assembly插件 打包用 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <configuration>
+                        <descriptorRefs>
+                            <descriptorRef>-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>make-assembly</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <!--Spring boot 热部署 -->
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <dependencies>
+                        <!-- spring热部署 -->
+                        <dependency>
+                            <groupId>org.springframework</groupId>
+                            <artifactId>springloaded</artifactId>
+                            <version>1.2.8.RELEASE</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <!-- 修复不同在IDEA下不能build xml文件的问题 使用IDEA的童鞋打开下面的注释-->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+                <excludes>
+                    <exclude>**/.DS_Store</exclude>
+                </excludes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
+
+    <modules>
+        <module>gtms-entity</module>
+        <module>gtms-core</module>
+        <module>gtms-service</module>
+    </modules>
+</project>

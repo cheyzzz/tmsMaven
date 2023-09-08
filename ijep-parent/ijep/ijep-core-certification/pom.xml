@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ijep</artifactId>
+        <groupId>com.bocft</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ijep-core-certification</artifactId>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.bocft</groupId>
+            <artifactId>org.bocft.cfca.jni</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/cryptokit.jni-1.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.bocft</groupId>
+            <artifactId>org.bocft.cfca.logback</artifactId>
+            <scope>system</scope>
+            <version>1.0</version>
+            <systemPath>${project.basedir}/libs/logback-cfca-jdk1.6-4.2.1.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.bocft</groupId>
+            <artifactId>org.bocft.cfca.sadk</artifactId>
+            <scope>system</scope>
+            <version>1.0</version>
+            <systemPath>${project.basedir}/libs/SADK-3.7.1.0.jar</systemPath>
+        </dependency>
+        <!-- fastjson依赖 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bocft</groupId>
+            <artifactId>ijep-entity-certification</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bocft</groupId>
+            <artifactId>ijep-orm-mybatis</artifactId>
+        </dependency>
+    </dependencies>
+     <build>
+
+         <resources>
+             <resource>
+                 <directory>libs/</directory>
+                 <targetPath>libs</targetPath>
+             </resource>
+         </resources>
+     </build>
+</project>

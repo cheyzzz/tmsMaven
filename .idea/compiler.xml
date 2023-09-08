@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ijep-entity-attachment" />
+        <module name="gtms-service-gateway" />
+        <module name="ijep-web-api" />
+        <module name="gtms-entity-gateway" />
+        <module name="ijep-bpm-server" />
+        <module name="ijep-bpm-api" />
+        <module name="gtms-entity-business" />
+        <module name="ijep-autoconfigure-orm" />
+        <module name="gtms-service-business" />
+        <module name="ijep-archetype-basic" />
+        <module name="ijep-core-certification" />
+        <module name="gtms-service-report" />
+        <module name="gtms-core-baffle" />
+        <module name="ijep-service-serial" />
+        <module name="ijep-router-zuul" />
+        <module name="ijep-commons-lang" />
+        <module name="ijep-cache-redis" />
+        <module name="ijep-core" />
+        <module name="gtms-entity-report" />
+        <module name="ijep-entity-bpm" />
+        <module name="ijep-bpm-client" />
+        <module name="ijep-archetype-service" />
+        <module name="gtms-service-job" />
+        <module name="ijep-cache-zookeeper" />
+        <module name="gtms-core-gateway" />
+        <module name="gtms-core-business" />
+        <module name="ijep-autoconfigure-cache-mongo" />
+        <module name="ijep-archetype-project-set" />
+        <module name="ijep-entity-sys" />
+        <module name="ijep-schedule-client" />
+        <module name="ijep-service-bpm" />
+        <module name="ijep-autoconfigure-web" />
+        <module name="ijep-attachment-core" />
+        <module name="ijep-service-attachment" />
+        <module name="ijep-orm-mybatis" />
+        <module name="ijep-service-schedule" />
+        <module name="ijep-service-sys" />
+        <module name="ijep-sys-core" />
+        <module name="ijep-entity-core" />
+        <module name="ijep-router-zuul-star-api" />
+        <module name="ijep-entity-certification" />
+        <module name="ijep-schedule-server" />
+        <module name="gtms-core-report" />
+        <module name="gtms-service-baffle" />
+        <module name="ijep-autoconfigure-cache-zookeeper" />
+        <module name="ijep-schedule-api" />
+        <module name="ijep-autoconfigure-bpm-client" />
+        <module name="gtms-service-manage" />
+        <module name="ijep-kgraph-api" />
+        <module name="gtms-entity-baffle" />
+        <module name="ijep-cache-mongo" />
+        <module name="ijep-autoconfigure-core" />
+        <module name="ijep-autoconfigure-cache-redis" />
+        <module name="ijep-orm-api" />
+        <module name="ijep-autoconfigure-schedule-client" />
+        <module name="ijep-stream-esper" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cimp-itl-core-parent" options="-parameters" />
+      <module name="gtms-core-baffle" options="-parameters" />
+      <module name="gtms-core-business" options="-parameters" />
+      <module name="gtms-core-gateway" options="-parameters" />
+      <module name="gtms-core-report" options="-parameters" />
+      <module name="gtms-entity-baffle" options="-parameters" />
+      <module name="gtms-entity-business" options="-parameters" />
+      <module name="gtms-entity-gateway" options="-parameters" />
+      <module name="gtms-entity-report" options="-parameters" />
+      <module name="gtms-service-baffle" options="-parameters" />
+      <module name="gtms-service-business" options="-parameters" />
+      <module name="gtms-service-gateway" options="-parameters" />
+      <module name="gtms-service-job" options="-parameters" />
+      <module name="gtms-service-manage" options="-parameters" />
+      <module name="gtms-service-report" options="-parameters" />
+      <module name="ijep-archetype-basic" options="-parameters" />
+      <module name="ijep-archetype-project-set" options="-parameters" />
+      <module name="ijep-archetype-service" options="-parameters" />
+      <module name="ijep-attachment-core" options="-parameters" />
+      <module name="ijep-autoconfigure-bpm-client" options="-parameters" />
+      <module name="ijep-autoconfigure-cache-mongo" options="-parameters" />
+      <module name="ijep-autoconfigure-cache-redis" options="-parameters" />
+      <module name="ijep-autoconfigure-cache-zookeeper" options="-parameters" />
+      <module name="ijep-autoconfigure-core" options="-parameters" />
+      <module name="ijep-autoconfigure-orm" options="-parameters" />
+      <module name="ijep-autoconfigure-schedule-client" options="-parameters" />
+      <module name="ijep-autoconfigure-web" options="-parameters" />
+      <module name="ijep-bpm-api" options="-parameters" />
+      <module name="ijep-bpm-client" options="-parameters" />
+      <module name="ijep-bpm-server" options="-parameters" />
+      <module name="ijep-cache-mongo" options="-parameters" />
+      <module name="ijep-cache-redis" options="-parameters" />
+      <module name="ijep-cache-zookeeper" options="-parameters" />
+      <module name="ijep-commons-lang" options="-parameters" />
+      <module name="ijep-core" options="-parameters" />
+      <module name="ijep-core-certification" options="-parameters" />
+      <module name="ijep-entity-attachment" options="-parameters" />
+      <module name="ijep-entity-bpm" options="-parameters" />
+      <module name="ijep-entity-certification" options="-parameters" />
+      <module name="ijep-entity-core" options="-parameters" />
+      <module name="ijep-entity-sys" options="-parameters" />
+      <module name="ijep-kgraph-api" options="-parameters" />
+      <module name="ijep-orm-api" options="-parameters" />
+      <module name="ijep-orm-mybatis" options="-parameters" />
+      <module name="ijep-router-zuul" options="-parameters" />
+      <module name="ijep-router-zuul-star-api" options="-parameters" />
+      <module name="ijep-schedule-api" options="-parameters" />
+      <module name="ijep-schedule-client" options="-parameters" />
+      <module name="ijep-schedule-server" options="-parameters" />
+      <module name="ijep-service-attachment" options="-parameters" />
+      <module name="ijep-service-bpm" options="-parameters" />
+      <module name="ijep-service-parent" options="" />
+      <module name="ijep-service-schedule" options="-parameters" />
+      <module name="ijep-service-serial" options="-parameters" />
+      <module name="ijep-service-sys" options="-parameters" />
+      <module name="ijep-stream-esper" options="-parameters" />
+      <module name="ijep-sys-core" options="-parameters" />
+      <module name="ijep-web-api" options="-parameters" />
+    </option>
+  </component>
+</project>

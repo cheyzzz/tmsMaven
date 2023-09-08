@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ijep-service-parent</artifactId>
+        <groupId>com.bocft</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ijep-router</artifactId>
+    <name>ijep-router</name>
+    <url>http://www.bocft.com/</url>
+    <packaging>pom</packaging>
+
+
+    <modules>
+        <module>ijep-router-zuul</module>
+        <module>ijep-router-zuul-star-api</module>
+    </modules>
+
+</project>
